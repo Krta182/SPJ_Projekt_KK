@@ -4,12 +4,11 @@ import styles from "./LoginPage.module.css";
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: "" };
+    this.state = { username: "", password: "" };
   }
 
   mySubmitHandler = (event) => {
     event.preventDefault();
-    alert("You are submitting " + this.state.username);
   };
 
   myChangeHandler = (event) => {
@@ -17,14 +16,15 @@ class LoginPage extends React.Component {
   };
   render() {
     return (
-      <div className={styles.loginForm}>
-        <div className={styles.background}></div>
-        <form onSubmit={this.mySubmitHandler}>
-          <h1>Hello {this.state.username}</h1>
-          <p>Enter your name, and submit:</p>
-          <input type="text" onChange={this.myChangeHandler} />
-          <input type="submit" />
-        </form>
+      <div className={styles.Header}>
+        <div className={styles.loginForm}>
+          <form onSubmit={this.mySubmitHandler}>
+            <input type="text" onChange={this.myChangeHandler} />
+            <input type="text" />
+            <br></br>
+            <button className={styles.submitUser} onSubmit={this.props.mySubmitHandler}>Submit</button>
+          </form>
+        </div>
       </div>
     );
   }
