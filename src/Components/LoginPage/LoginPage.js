@@ -17,12 +17,22 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div className={styles.Header}>
+        <h1>Facebook</h1>
         <div className={styles.loginForm}>
           <form onSubmit={this.mySubmitHandler}>
-            <input type="text" onChange={this.myChangeHandler} />
-            <input type="text" />
+            <input
+              type="text"
+              onChange={this.myChangeHandler}
+              placeholder="Username"
+            />
+            <input type="text" placeholder="Password" />
             <br></br>
-            <button className={styles.submitUser} onSubmit={this.props.mySubmitHandler}>Submit</button>
+            <button
+              className={styles.submitUser}
+              onSubmit={this.props.mySubmitHandler}
+            >
+              Login
+            </button>
           </form>
         </div>
       </div>
