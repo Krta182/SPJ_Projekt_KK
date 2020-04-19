@@ -1,33 +1,28 @@
 import React from "react";
-import styles from "./LoginPage.module.css";
+import styles from "./RegistrationOnLoginPage.module.css";
 
-class LoginPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: "", password: "" };
-  }
+class RegistrationOnLoginPage extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { username: ""};
+    }
+  
 
-  mySubmitHandler = (event) => {
+
+mySubmitHandler = (event) => {
     event.preventDefault();
   };
 
-  myChangeHandler = (event) => {
-    this.setState({ username: event.target.value });
-  };
-  render() {
+
+render() {
     return (
       <div className={styles.Header}>
-        <h1>Facebook</h1>
+        <h1>Izradite novi račun</h1>
         <div className={styles.loginForm}>
           <form onSubmit={this.mySubmitHandler}>
-            <p>
-              <span className={styles.usernameAndPasswordEnter}>
-                Enter your username and password:
-              </span>
-            </p>
             <input
               type="text"
-              onChange={this.myChangeHandler}
+             
               placeholder="Username"
             />
 
@@ -41,7 +36,7 @@ class LoginPage extends React.Component {
               className={styles.submitUser}
               onSubmit={this.props.mySubmitHandler}
             >
-              Login
+              Registration
             </button>
           </form>
         </div>
@@ -50,4 +45,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default RegistrationOnLoginPage;

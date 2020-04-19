@@ -1,17 +1,15 @@
 .loginForm {
+  right: 4%;
+  display: inline-flex;
   position: absolute;
-  top: 0%;
-  right: 2.5%;
-  width: 150px;
-  padding-top: 0.5%;
-  padding-left: 0.5%;
+  margin-right: 10%;
 }
 body {
   background-color: white;
   background-image: url("Facebook_TitlePage.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 300px;
+  background-size: 280px;
   height: 620px;
 }
 
@@ -21,6 +19,8 @@ body {
   border-collapse: 0.5px;
   border-color: rgb(13, 161, 13);
   font-size: 14px;
+  display: inline-flex;
+  margin-left: 10px;
 }
 
 .Header {
@@ -35,6 +35,16 @@ h1 {
   color: white;
   text-shadow: 2px 2px 4px #000000;
   text-align: left;
-  display: inline-block;
+  display: inline-flex;
   margin-left: 10%;
+}
+
+.usernameAndPasswordEnter {
+  font-size: 12px;
+  font-style: italic;
+  color: white;
+}
+
+.password{
+ margin-left: 10px;
 }
