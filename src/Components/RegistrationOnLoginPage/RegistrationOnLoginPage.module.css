@@ -1,0 +1,53 @@
+.registrationForm {
+    right: 4%;
+    position: absolute;
+    margin-right: 13%;
+    margin-top: 3%;
+  }
+
+  
+  .submitRegistrationUser {
+    background-color: rgb(76, 172, 76);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 16px;
+    display: inline-flex;
+    margin-top: 15px;
+    padding-left: 7%;
+    
+  }
+
+  .registrationTerms{
+      font-size:9px;
+  }
+
+  .regName{
+      margin-right: 7px;
+      margin-bottom: 10px;
+      
+  }
+
+  .regMail{
+      margin-bottom: 10px;
+      width: 325px;
+  }
+
+  .regPassword{
+    margin-bottom: 10px;
+    width: 325px;
+  }
+
+  .regBirthday{
+    margin-bottom: 10px;
+  }
+
+  .regGender{
+      margin-bottom: 10px;
+  }
+ 
+  h2{
+      color: black;
+      font-family: inherit;
+      font-size:25px;
+  }

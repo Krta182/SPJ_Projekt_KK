@@ -3,14 +3,16 @@
   display: inline-flex;
   position: absolute;
   margin-right: 10%;
+  margin-top:-8.5px;
 }
 body {
-  background-color: white;
+  background-color: rgb(251, 253, 255);
   background-image: url("Facebook_TitlePage.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: 280px;
   height: 620px;
+  background-position-x: 100px;
 }
 
 .submitUser {
@@ -41,7 +43,7 @@ h1 {
 
 .usernameAndPasswordEnter {
   font-size: 12px;
-  font-style: italic;
+  font-style: inherit;
   color: white;
 }
 
