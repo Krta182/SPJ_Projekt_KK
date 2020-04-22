@@ -9,6 +9,7 @@ class LoginPage extends React.Component {
 
   mySubmitHandler = (event) => {
     event.preventDefault();
+    
   };
 
   myChangeHandler = (event) => {
@@ -26,23 +27,25 @@ class LoginPage extends React.Component {
               </span>
             </p>
             <input
-              type="text"
+              type="email"
               onChange={this.myChangeHandler}
-              placeholder="Username"
+              placeholder="E-mail adress"
             />
 
             <input
-              type="text"
+              type="password"
               placeholder="Password"
               className={styles.password}
             />
 
             <button
+              id="BtnSubmitUser"
               className={styles.submitUser}
               onSubmit={this.props.mySubmitHandler}
             >
               Login
             </button>
+         
           </form>
         </div>
       </div>

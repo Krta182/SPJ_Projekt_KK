@@ -13,7 +13,7 @@ class RegistrationOnLoginPage extends React.Component {
 
   render() {
     return (
-      <div className={styles.registrationHeader}>
+    
         <div className={styles.registrationForm}>
           <h2>Create new account</h2>
           <form onSubmit={this.mySubmitHandler}>
@@ -21,17 +21,17 @@ class RegistrationOnLoginPage extends React.Component {
             <input
               type="text"
               placeholder="Surname"
-              className={styles.regSurame}
+              className={styles.regSurname}
             />
             <br></br>
             <input
-              type="text"
+              type="email"
               placeholder="E-mail adress"
               className={styles.regMail}
             />
             <br></br>
             <input
-              type="text"
+              type="password"
               placeholder="New Password"
               className={styles.regPassword}
             />
@@ -67,7 +67,7 @@ class RegistrationOnLoginPage extends React.Component {
             </button>
           </form>
         </div>
-      </div>
+      
     );
   }
 }

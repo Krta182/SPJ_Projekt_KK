@@ -10,9 +10,11 @@ body {
   background-image: url("Facebook_TitlePage.png");
   background-repeat: no-repeat;
   background-position: left;
-  background-size: 280px;
+  background-size: 270px;
   height: 620px;
+  background-attachment: fixed;
   background-position-x: 100px;
+ 
 }
 
 .submitUser {
@@ -23,13 +25,22 @@ body {
   font-size: 14px;
   display: inline-flex;
   margin-left: 10px;
+  width: auto;
+}
+
+
+.submitUser:hover {
+  background-color: rgb(72, 138, 72);
+  color: white;
+  border-collapse: 0.5px;
+  border-color: rgb(13, 161, 13);
+  font-size: 14px;
+  display: inline-flex;
+  margin-left: 10px;
+  width: auto;
 }
 
 .Header {
-  background-color: rgb(36, 92, 148);
-}
-
-.Footer {
   background-color: rgb(36, 92, 148);
 }
 
