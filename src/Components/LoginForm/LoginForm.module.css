@@ -1,0 +1,42 @@
+.loginForm {
+    right: 4%;
+    display: inline-flex;
+    position: absolute;
+    margin-right: 10%;
+    margin-top:-8.5px;
+  }
+  
+  
+  .submitUser {
+    background-color: rgb(76, 172, 76);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 14px;
+    display: inline-flex;
+    margin-left: 10px;
+    width: auto;
+  }
+  
+  
+  .submitUser:hover {
+    background-color: rgb(72, 138, 72);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 14px;
+    display: inline-flex;
+    margin-left: 10px;
+    width: auto;
+  }
+  
+  
+  .usernameAndPasswordEnter {
+    font-size: 12px;
+    font-style: inherit;
+    color: white;
+  }
+  
+  .password{
+   margin-left: 10px;
+  }

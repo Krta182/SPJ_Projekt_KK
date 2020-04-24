@@ -1,0 +1,12 @@
+
+.Header {
+  background-color: rgb(36, 92, 148);
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: left;
+  display: inline-flex;
+  margin-left: 10%;
+}
