@@ -1,0 +1,48 @@
+.HeaderNav {
+  background-color: rgb(36, 92, 148);
+  display: flex;
+}
+
+.Display {
+  display: inline-flex;
+  margin-left: 700px;
+  margin-top: 7px;
+}
+.Logout {
+  background-color: rgb(36, 92, 148);
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+
+.Logout:hover {
+  background-color: rgb(32, 51, 102);
+  padding-bottom: 6px;
+  padding-top: 1px;
+}
+.Profile {
+  background-color: rgb(36, 92, 148);
+  margin-right: 13px;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+.Profile:hover {
+  background-color: rgb(32, 51, 102);
+  padding-bottom: 7px;
+  padding-top: 1px;
+}
+
+.Home {
+  background-color: rgb(36, 92, 148);
+  color: white;
+  border: none;
+  text-decoration: none;
+  margin-right: 13px;
+}
+
+.Home:hover {
+  background-color: rgb(32, 51, 102);
+  padding-bottom: 7px;
+  padding-top: 1px;
+}

@@ -2,18 +2,9 @@ import React from "react";
 import styles from "./LoginForm.module.css";
 
 class LoginForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { email: "", password: "" };
-  }
-
+ 
   mySubmitHandler = (event) => {
     event.preventDefault();
-    
-  };
-
-  myChangeHandler = (event) => {
-    this.setState({ email: event.target.value });
   };
 
   render() {
@@ -27,7 +18,6 @@ class LoginForm extends React.Component {
           </p>
           <input
             type="email"
-            onChange={this.myChangeHandler}
             placeholder="E-mail adress"
           />
       
