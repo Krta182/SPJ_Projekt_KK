@@ -1,6 +1,8 @@
 .HeaderNav {
   background-color: rgb(36, 92, 148);
   display: flex;
+  max-width: 1980px;
+  max-height: 1050px;
 }
 
 .Display {
@@ -18,7 +20,7 @@
 
 .Logout:hover {
   background-color: rgb(32, 51, 102);
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   padding-top: 1px;
   cursor: pointer;
   opacity: 1;
