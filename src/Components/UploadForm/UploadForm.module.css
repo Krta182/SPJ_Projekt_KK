@@ -1,0 +1,53 @@
+.DisplayForm {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.uploadForm {
+  width: 450px;
+  height: 70px;
+  background-color: rgb(238, 238, 238);
+  font-size: 14px;
+}
+
+.UploadFormBtn {
+  position: absolute;
+  right: 542px;
+  top: 114px;
+  background-color: rgb(76, 172, 76);
+  color: white;
+  border-collapse: 0.5px;
+  border-color: rgb(13, 161, 13);
+  font-size: 14px;
+  display: inline-flex;
+  margin-left: 10px;
+  width: auto;
+}
+  
+  .UploadFormBtn:hover {
+    background-color: rgb(72, 138, 72);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 14px;
+    display: inline-flex;
+    margin-left: 10px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .UploadImage{
+    /*
+    position: absolute;
+    background-color: rgb(76, 172, 76);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 14px;
+    display: inline-flex;
+    margin-left: 10px;
+    width: auto;
+    */
+    background-image: url("add_a_photo-24px.svg");
+    background-repeat: no-repeat;
+  }

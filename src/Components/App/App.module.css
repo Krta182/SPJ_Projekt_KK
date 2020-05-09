@@ -41,8 +41,7 @@ body {
 */
 
 .displayBtns {
-  display: flex;
-  margin-left: 750px;
+  
 }
 
 @keyframes App-logo-spin {

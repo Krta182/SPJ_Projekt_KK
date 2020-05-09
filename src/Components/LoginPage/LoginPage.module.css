@@ -1,0 +1,11 @@
+
+.container{
+  background-color: rgb(251, 253, 255);
+  background-image: url("Facebook_TitlePage.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 270px;
+  height: 620px;
+  background-attachment: fixed;
+  background-position-x: 100px;
+}
