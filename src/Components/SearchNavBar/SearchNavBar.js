@@ -6,7 +6,7 @@ class SearchNavBar extends React.Component {
     return (
       <div>
         <form className={styles.SearchForm}>
-          <input type="search" placeholder="Search......." size="75"  />
+          <input type="search" placeholder="Search......." size="75" />
         </form>
       </div>
     );

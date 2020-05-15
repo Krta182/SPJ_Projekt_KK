@@ -1,73 +1,71 @@
 .registrationForm {
-    right: 4%;
-    position: absolute;
-    margin-right: 13%;
-    margin-top: 3%;
-  }
+  right: 4%;
+  position: absolute;
+  margin-right: 13%;
+  margin-top: 3%;
+}
 
-  
-  .submitRegistrationUser {
-    background-color: rgb(76, 172, 76);
-    color: white;
-    border-collapse: 0.5px;
-    border-color: rgb(13, 161, 13);
-    font-size: 16px;
-    display: inline-flex;
-    margin-top: 15px;
-    width: 80px;
-    line-height: 200%;
-  }
+.submitRegistrationUser {
+  background-color: rgb(76, 172, 76);
+  color: white;
+  border-collapse: 0.5px;
+  border-color: rgb(13, 161, 13);
+  font-size: 16px;
+  display: inline-flex;
+  margin-top: 15px;
+  width: 80px;
+  line-height: 200%;
+}
 
-  .submitRegistrationUser:hover {
-    background-color: rgb(72, 138, 72);
-    color: white;
-    border-collapse: 0.5px;
-    border-color: rgb(13, 161, 13);
-    font-size: 16px;
-    display: inline-flex;
-    margin-top: 15px;
-    width: 80px;
-    line-height: 200%;
-  }
+.submitRegistrationUser:hover {
+  background-color: rgb(72, 138, 72);
+  color: white;
+  border-collapse: 0.5px;
+  border-color: rgb(13, 161, 13);
+  font-size: 16px;
+  display: inline-flex;
+  margin-top: 15px;
+  width: 80px;
+  line-height: 200%;
+}
 
-  .registrationTerms{
-      font-size:9px;
-  }
+.registrationTerms {
+  font-size: 9px;
+}
 
-  .regName{
-      margin-right: 7px;
-      margin-bottom: 10px;
-      font-size: 15px;
-      
-  }
-  .regSurname{
-    font-size: 15px;
-  }
+.regName {
+  margin-right: 7px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.regSurname {
+  font-size: 15px;
+}
 
-  .regMail{
-      margin-bottom: 10px;
-      width: 364.5px;
-      font-size: 15px;
-  }
+.regMail {
+  margin-bottom: 10px;
+  width: 364.5px;
+  font-size: 15px;
+}
 
-  .regPassword{
-    margin-bottom: 10px;
-    width: 364.5px;
-    font-size: 15px;
-  }
+.regPassword {
+  margin-bottom: 10px;
+  width: 364.5px;
+  font-size: 15px;
+}
 
-  .regBirthday{
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
+.regBirthday {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
 
-  .regGender{
-      margin-bottom: 10px;
-      font-size: 15px;
-  }
- 
-  h2{
-      color: black;
-      font-family: inherit;
-      font-size:27px;
-  }
+.regGender {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+h2 {
+  color: black;
+  font-family: inherit;
+  font-size: 27px;
+}

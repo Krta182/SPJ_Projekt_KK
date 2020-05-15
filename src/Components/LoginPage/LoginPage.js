@@ -5,7 +5,7 @@ import HeaderOnLoginPage from "../HeaderOnLoginPage/HeaderOnLoginPage";
 
 const LoginPage = (props) => {
   return (
-    <div className={styles.cont}>
+    <div className={styles.container}>
       <HeaderOnLoginPage></HeaderOnLoginPage>
       <RegistrationOnLoginPage></RegistrationOnLoginPage>
     </div>

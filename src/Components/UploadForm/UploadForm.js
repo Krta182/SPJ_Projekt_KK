@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./UploadForm.module.css";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 
-
 class UploadForm extends React.Component {
   mySubmitHandler = (event) => {
     event.preventDefault();

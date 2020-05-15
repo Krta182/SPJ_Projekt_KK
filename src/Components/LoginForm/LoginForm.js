@@ -1,39 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../redux/actions";
+import { useHistory } from "react-router-dom";
 
-class LoginForm extends React.Component {
-  mySubmitHandler = (event) => {
+const LoginForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const user = {
+      email,
+      password,
+    };
+    dispatch(addUser(user));
+    setEmail("");
+    setPassword("");
+
+    history.push("/Home");
   };
 
-  render() {
-    return (
-      <div className={styles.loginForm}>
-        <form onClick={this.props.onHandleLogin}>
-          <p>
-            <span className={styles.usernameAndPasswordEnter}>
-              Enter your username and password:
-            </span>
-          </p>
-          <input type="email" placeholder="E-mail adress" />
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
 
-          <input
-            type="password"
-            placeholder="Password"
-            className={styles.password}
-          />
+  const handleChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
-          <button
-            id="BtnSubmitUser"
-            className={styles.submitUser}
-           
-          >
-            Login
-          </button>
-        </form>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.loginForm}>
+      <form onSubmit={handleSubmit}>
+        <p>
+          <span className={styles.usernameAndPasswordEnter}>
+            Enter your username and password:
+          </span>
+        </p>
+        <input
+          type="email"
+          placeholder="E-mail adress"
+          value={email}
+          onChange={handleChangeEmail}
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={handleChangePassword}
+          className={styles.password}
+          value={password}
+          required
+        />
+
+        <button type="submit" className={styles.submitUser}>
+          Login
+        </button>
+      </form>
+    </div>
+  );
+};
 
 export default LoginForm;

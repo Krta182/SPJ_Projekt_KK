@@ -9,43 +9,40 @@ class PasswordChanger extends React.Component {
 
   render() {
     return (
-      
-       
-        <div className={styles.passwordChangeForm}>
-          <form onSubmit={this.mySubmitHandler}>
-            <p>
-              <span className={styles.oldPasswordHeader}>
-                Enter your password:
-              </span>
-            </p>
-            <input
-              type="password"
-              placeholder="Password"
-              size="40"
-              className={styles.oldPasswordInput}
-            />
-            <p>
-              <span className={styles.newPasswordHeader}>
-                Enter your new password:
-              </span>
-            </p>
-            <input
-              type="password"
-              placeholder="New Password"
-              className={styles.newPasswordInput}
-              size="40"
-            />
-            <br></br>
-            <button
-              id="BtnChangePassword"
-              className={styles.SubmitNewPassword}
-              onSubmit={this.props.mySubmitHandler}
-            >
-              Change password
-            </button>
-          </form>
-        </div>
-     
+      <div className={styles.passwordChangeForm}>
+        <form onSubmit={this.mySubmitHandler}>
+          <p>
+            <span className={styles.oldPasswordHeader}>
+              Enter your password:
+            </span>
+          </p>
+          <input
+            type="password"
+            placeholder="Password"
+            size="40"
+            className={styles.oldPasswordInput}
+          />
+          <p>
+            <span className={styles.newPasswordHeader}>
+              Enter your new password:
+            </span>
+          </p>
+          <input
+            type="password"
+            placeholder="New Password"
+            className={styles.newPasswordInput}
+            size="40"
+          />
+          <br></br>
+          <button
+            id="BtnChangePassword"
+            className={styles.SubmitNewPassword}
+            onSubmit={this.props.mySubmitHandler}
+          >
+            Change password
+          </button>
+        </form>
+      </div>
     );
   }
 }

@@ -2,25 +2,37 @@ import React from "react";
 import styles from "./NavBar.module.css";
 import SearchNavBar from "../SearchNavBar/SearchNavBar";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../redux/actions";
+import PrivateNavLink from "../Router/PrivateNavLink";
 
-const NavBar = (props) => {
+const NavBar = () => {
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(addUser({ email: "", password: "" }));
+  };
   return (
     <header className={styles.HeaderNav}>
       <SearchNavBar></SearchNavBar>
       <nav>
         <div className={styles.Display}>
-          <NavLink to="/" className={styles.Home}>
+          <PrivateNavLink to="/Home" className={styles.Home}>
             Home
-          </NavLink>
-          <NavLink to="/Profile" className={styles.Profile}>
+          </PrivateNavLink>
+          <PrivateNavLink to="/Profile" className={styles.Profile}>
             Profile
-          </NavLink>
-          <NavLink to="/Settings" className={styles.Settings}>
+          </PrivateNavLink>
+          <PrivateNavLink to="/Settings" className={styles.Settings}>
             Settings
-          </NavLink>
-          <NavLink to="/LoginPage" className={styles.Logout}>
+          </PrivateNavLink>
+          <PrivateNavLink
+            to="/"
+            className={styles.Logout}
+            onClick={handleLogout}
+          >
             Log out
-          </NavLink>
+          </PrivateNavLink>
         </div>
       </nav>
     </header>
