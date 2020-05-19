@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
-import { addUser } from "../../redux/actions";
+import { setUser } from "../../redux/actions";
 import { useHistory } from "react-router-dom";
+
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const LoginForm = () => {
       email,
       password,
     };
-    dispatch(addUser(user));
+    dispatch(setUser(user));
     setEmail("");
     setPassword("");
 

@@ -6,8 +6,21 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import PrivateRoute from "../Router/PrivateRoute";
 import Settings from "../Settings/Settings";
 import Profile from "../Profile/Profile";
+import { addUser } from "../../redux/actions";
+import{getUsers}from "../../services";
+import { connect } from 'react-redux';
 
 class App extends Component {
+  fetchData = async () => {
+    const { dispatch } = this.props;
+    const json = await getUsers();
+    dispatch(addUser(json));
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
   render() {
     return (
       <Router>
@@ -20,5 +33,10 @@ class App extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    users:state.users.users
+  };
+}
 
-export default App;
+export default connect(mapStateToProps)(App);

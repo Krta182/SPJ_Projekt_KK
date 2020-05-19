@@ -2,20 +2,13 @@ import React from "react";
 import styles from "./RegistrationOnLoginPage.module.css";
 
 class RegistrationOnLoginPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: "" };
-  }
-
-  mySubmitHandler = (event) => {
-    event.preventDefault();
-  };
+ 
 
   render() {
     return (
       <div className={styles.registrationForm}>
         <h2>Create new account</h2>
-        <form onSubmit={this.mySubmitHandler}>
+        <form>
           <input
             type="text"
             placeholder="Name"

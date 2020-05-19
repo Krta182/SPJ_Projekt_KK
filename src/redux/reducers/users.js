@@ -1,21 +1,13 @@
-import { ADD_USER } from "../actions";
+import { ADD_USER, SET_USER } from "../actions";
 
 const initialState = {
-  users: [
-    {
-      email: "kristijan.krtalic@gmail.com",
-      password: "TestUser",
-      name: "Kristijan",
-      isAuth: true,
-    },
-  ],
+  users: [],
   currentUser: {
-    isAuth: true,
-    email: "",
+    isAuth: false,
   },
 };
 
-function addUser(state, action) {
+function setUser(state, action) {
   const match = state.users.find(
     (user) =>
       user.email === action.payload.email &&
@@ -31,11 +23,19 @@ function addUser(state, action) {
     },
   };
 }
+function addUser(state, action) {
+  return {
+    ...state,
+    users: [...state.users, ...action.payload]
+  };
+}
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_USER:
       return addUser(state, action);
+  case SET_USER:
+  return setUser(state,action);
 
     default:
       return state;

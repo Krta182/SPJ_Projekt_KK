@@ -3,14 +3,14 @@ import styles from "./NavBar.module.css";
 import SearchNavBar from "../SearchNavBar/SearchNavBar";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addUser } from "../../redux/actions";
+import { setUser } from "../../redux/actions";
 import PrivateNavLink from "../Router/PrivateNavLink";
 
 const NavBar = () => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    dispatch(addUser({ email: "", password: "" }));
+    dispatch(setUser({ email: "", password: "" }));
   };
   return (
     <header className={styles.HeaderNav}>
