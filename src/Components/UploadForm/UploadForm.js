@@ -18,7 +18,7 @@ class UploadForm extends React.Component {
   render() {
     return (
       <div className={styles.DisplayForm}>
-        <form>
+        <form onSubmit={this.mySubmitHandler}>
           <input
             type="text"
             placeholder="What's on your mind..?"

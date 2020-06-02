@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import styles from "./App.module.css";
 import Home from "../Home/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
@@ -7,36 +7,30 @@ import PrivateRoute from "../Router/PrivateRoute";
 import Settings from "../Settings/Settings";
 import Profile from "../Profile/Profile";
 import { addUser } from "../../redux/actions";
-import{getUsers}from "../../services";
-import { connect } from 'react-redux';
+import { getUsers } from "../../services";
+import { useDispatch } from "react-redux";
 
-class App extends Component {
-  fetchData = async () => {
-    const { dispatch } = this.props;
+const App = () => {
+  const dispatch = useDispatch();
+
+  const fetchData = async () => {
     const json = await getUsers();
     dispatch(addUser(json));
   };
 
-  componentDidMount() {
-    this.fetchData();
-  }
+  useEffect(() => {
+    fetchData();
+  });
 
-  render() {
-    return (
-      <Router>
-        <Route exact path="/" component={LoginPage} />
+  return (
+    <Router>
+      <Route exact path="/" component={LoginPage} />
 
-        <PrivateRoute exact path="/Home" component={Home} />
-        <PrivateRoute path="/Settings" component={Settings} />
-        <PrivateRoute path="/Profile" component={Profile} />
-      </Router>
-    );
-  }
-}
-function mapStateToProps(state) {
-  return {
-    users:state.users.users
-  };
-}
+      <PrivateRoute exact path="/Home" component={Home} />
+      <PrivateRoute path="/Settings" component={Settings} />
+      <PrivateRoute path="/Profile" component={Profile} />
+    </Router>
+  );
+};
 
-export default connect(mapStateToProps)(App);
+export default App;
