@@ -31,6 +31,8 @@ const RegistrationOnLoginPage = () => {
       console.log(error);
     }
 
+    alert("Registration is successful! Now share your experince with friends")
+
     dispatch(setUser(user));
     setEmail("");
     setPassword("");
@@ -39,6 +41,7 @@ const RegistrationOnLoginPage = () => {
     setBirthday("");
     setGender("");
   };
+  
 
   const handleChangeName = async (event) => {
     setName(event.target.value);

@@ -3,12 +3,15 @@ import styles from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/actions";
 import { useHistory } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const history = useHistory();
+  const { currentUser } = useSelector(state => state.users);
+
 
   const user = {
     email,
@@ -23,10 +26,11 @@ const LoginForm = () => {
     setEmail("");
     setPassword("");
 
-    if(user.email===email && user.password===password)
-    history.push("/Home");
+    if(currentUser.isAuth===false){
+      alert("Wrong email or password!")
+    }
     else{
-      alert("Email or password not correct.Please try again")
+      history.push("/Home");
     }
   };
 

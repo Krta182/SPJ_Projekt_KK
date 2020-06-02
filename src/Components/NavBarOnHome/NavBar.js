@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 import SearchNavBar from "../SearchNavBar/SearchNavBar";
-import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/actions";
 import PrivateNavLink from "../Router/PrivateNavLink";

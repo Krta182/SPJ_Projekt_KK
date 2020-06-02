@@ -17,6 +17,33 @@
       "birthday": "2020-06-01",
       "gender": "Male",
       "id": 2
+    },
+    {
+      "name": "ivan",
+      "surname": "kraljevic",
+      "email": "ivankraljevic@gmail.com",
+      "password": "ivank",
+      "birthday": "1998-01-01",
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "name": "Ivan",
+      "surname": "Roso",
+      "email": "ivanRoso@gmal.com",
+      "password": "ivanr",
+      "birthday": "2020-06-01",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "name": "Robert",
+      "surname": "Krtalic",
+      "email": "robi.krtalic@gmail.com",
+      "password": "robik",
+      "birthday": "2020-06-01",
+      "gender": "Male",
+      "id": 5
     }
   ]
 }
