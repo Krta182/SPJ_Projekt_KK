@@ -1,10 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./PasswordChanger.module.css";
-import NavBar from "../NavBarOnHome/NavBar";
+import { useDispatch } from "react-redux";
+import { editUserPassword } from "../../redux/actions";
+import { useSelector } from "react-redux";
+import { updateUser, deleteUser, postUser } from "../../services";
 
 const PasswordChanger = () => {
+  const [oldPassword, setOldPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const { currentUser } = useSelector((state) => state.users);
+
+  /*
+const handlePost=async()=>{
+
+  try {
+    await postUser(currentUser);
+  } catch (error) {
+    console.log(error);
+  }
+
+}
+  
+  const handleDelete = async () => {
+    await deleteUser(currentUser.id);
+    
+  };
+*/
+
+  const fetchData = async () => {
+    if (currentUser) {
+      const json = await updateUser(currentUser);
+      console.log(json);
+    } else {
+      alert("Password change has been incorrect");
+    }
+  };
+
+  const userPassword = {
+    oldPassword,
+    newPassword,
+  };
+
+  const handleChangeOldPassword = async (event) => {
+    setOldPassword(event.target.value);
+    console.log(oldPassword);
+  };
+
+  const handleChangeNewPassword = async (event) => {
+    setNewPassword(event.target.value);
+    console.log(newPassword);
+  };
+
   const mySubmitHandler = (event) => {
     event.preventDefault();
+    console.log(currentUser);
+
+    if (currentUser.password !== userPassword.oldPassword) {
+      alert("Wrong password input! Please repeat your correct password!");
+    } else {
+      // handleDelete();
+
+      currentUser.password = userPassword.newPassword;
+      fetchData();
+      //handlePost();
+      alert("You succesfully changed your password!");
+    }
+
+    setOldPassword("");
+    setNewPassword("");
   };
 
   return (
@@ -18,6 +81,9 @@ const PasswordChanger = () => {
           placeholder="Password"
           size="40"
           className={styles.oldPasswordInput}
+          onChange={handleChangeOldPassword}
+          value={oldPassword}
+          required
         />
         <p>
           <span className={styles.newPasswordHeader}>
@@ -29,6 +95,9 @@ const PasswordChanger = () => {
           placeholder="New Password"
           className={styles.newPasswordInput}
           size="40"
+          onChange={handleChangeNewPassword}
+          value={newPassword}
+          required
         />
         <br></br>
         <button

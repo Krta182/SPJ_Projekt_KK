@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "../../redux/actions";
 import PrivateNavLink from "../Router/PrivateNavLink";
 
+
 const NavBar = () => {
   const dispatch = useDispatch();
 

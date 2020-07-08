@@ -1,35 +1,46 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "./UploadForm.module.css";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
+import { useDispatch } from "react-redux";
 
-class UploadForm extends React.Component {
-  mySubmitHandler = (event) => {
+
+const UploadForm =()=> {
+  const[post,setPost]=useState("");
+
+
+ const mySubmitHandler = (event) => {
     event.preventDefault();
   };
 
-  fileUploadButton = () => {
+ const fileUploadButton = () => {
     document.getElementById("fileButton").click();
     document.getElementById("fileButton").onchange = () => {
       this.setState({
         fileUploadState: document.getElementById("fileButton").value,
       });
     };
+
   };
-  render() {
+
+  const handleChangeForm = async (event)=>{
+    setPost(event.target.value)
+    console.log(post);
+  }
     return (
       <div className={styles.DisplayForm}>
-        <form onSubmit={this.mySubmitHandler}>
+        <form onSubmit={mySubmitHandler}>
           <input
             type="text"
             placeholder="What's on your mind..?"
             className={styles.uploadForm}
+            onChange={handleChangeForm}
           />
 
           <button className={styles.UploadFormBtn}>Upload</button>
           <input id="fileButton" type="file" hidden />
           <button
             className={styles.UploadImage}
-            onClick={this.fileUploadButton}
+            onClick={fileUploadButton}
             style={{ fontSize: 1 }}
           >
             <AddAPhotoIcon />
@@ -38,6 +49,6 @@ class UploadForm extends React.Component {
       </div>
     );
   }
-}
+
 
 export default UploadForm;

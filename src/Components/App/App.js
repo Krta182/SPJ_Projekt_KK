@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from "react";
-import styles from "./App.module.css";
+import React, {  useEffect } from "react";
 import Home from "../Home/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";

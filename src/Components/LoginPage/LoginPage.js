@@ -3,7 +3,7 @@ import styles from "./LoginPage.module.css";
 import RegistrationOnLoginPage from "../RegistrationOnLoginPage/RegistrationOnLoginPage";
 import HeaderOnLoginPage from "../HeaderOnLoginPage/HeaderOnLoginPage";
 
-const LoginPage = (props) => {
+const LoginPage = () => {
   return (
     <div className={styles.container}>
       <HeaderOnLoginPage></HeaderOnLoginPage>

@@ -20,18 +20,20 @@ const LoginForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+/*
+    if(currentUser.isAuth===true){
+      history.push("/Home");
+    }
+    else{
+      alert("Wrong email or password!")
+    }
+*/
 
-    
     dispatch(setUser(user));
     setEmail("");
     setPassword("");
+    history.push("/Home");
 
-    if(currentUser.isAuth===false){
-      alert("Wrong email or password!")
-    }
-    else{
-      history.push("/Home");
-    }
   };
 
   const handleChangeEmail = (event) => {

@@ -1,7 +1,7 @@
 .DisplayForm {
-  margin-top: 23px;
+  margin-top: 40px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
 }
 .uploadForm {
   width: 460px;
@@ -10,8 +10,11 @@
   max-height: 1050;
   background-color: rgb(238, 238, 238);
   font-size: 14px;
-  vertical-align: text-top;
-  text-align: left;
+  border: 1;
+  border-color: rgb(14, 61, 107);
+  vertical-align: top;
+  border-block-end-color: black;
+  outline: none;
 }
 
 .UploadImage {
@@ -21,6 +24,7 @@
   border-collapse: 0.5px;
   border-color: rgb(17, 79, 141);
   width: 468px;
+  margin-top: 0.3px;
 }
 
 .UploadImage:hover {

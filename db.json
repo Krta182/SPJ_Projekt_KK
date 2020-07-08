@@ -1,15 +1,6 @@
 {
   "users": [
     {
-      "name": "Kristijan",
-      "surname": "Krtalic",
-      "email": "kristijankrtalic@gmail.com",
-      "password": "TestUser",
-      "birthday": "2000-02-18",
-      "gender": "Male",
-      "id": 1
-    },
-    {
       "name": "Luka",
       "surname": "Muse",
       "email": "lukaMuse@gmail.com",
@@ -44,6 +35,15 @@
       "birthday": "2020-06-01",
       "gender": "Male",
       "id": 5
+    },
+    {
+      "name": "Kristijan",
+      "surname": "Krtalic",
+      "email": "kk@gmail.com",
+      "password": "3",
+      "birthday": "2020-06-01",
+      "gender": "Male",
+      "id": 1
     }
   ]
 }

@@ -1,5 +1,18 @@
 .Name{
-    display: flex;
-    justify-content: start;
     color: rgb(36, 92, 148);
+    margin-left: 1150px;    
+}
+.OnlineUsers{
+    color: rgb(36, 92, 148);
+}
+
+
+.displayOnlineUsers{
+    color: rgb(36, 92, 148);
+    
+
+}
+
+.display{
+    display: inline-flex
 }

@@ -1,6 +1,7 @@
-import { ADD_USER, SET_USER } from "../actions";
+import { ADD_USER, SET_USER,FILTER_USERS,EDIT_USER } from "../actions";
 
 const initialState = {
+  filteredUsers:[],
   users: [],
   currentUser: {
     isAuth: false,
@@ -31,6 +32,28 @@ function addUser(state, action) {
   };
 }
 
+function filterUsers(state,action){
+  return Object.assign({}, state, {
+    filteredUsers: state.users.filter(
+      user =>
+        user.name.toLowerCase().search(action.payload.toLowerCase()) !== -1
+        
+    )
+  });
+}
+
+function editUserPassword(state,action){
+  const index = state.users.findIndex(c => c.id === action.payload.id);
+  return {
+    ...state,
+    users: [
+      ...state.users.slice(0,index),
+      action.payload,
+      ...state.users.slice(index + 1)
+    ],
+  }
+}
+
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_USER:
@@ -38,7 +61,14 @@ export default function reducer(state = initialState, action) {
   case SET_USER:
   return setUser(state,action);
 
+  case FILTER_USERS:
+    return filterUsers(state,action);
+
+  case EDIT_USER:
+    return editUserPassword(state,action);
+
     default:
       return state;
   }
 }
+
