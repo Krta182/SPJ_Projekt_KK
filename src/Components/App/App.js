@@ -8,6 +8,7 @@ import Profile from "../Profile/Profile";
 import { addUser } from "../../redux/actions";
 import { getUsers } from "../../services";
 import { useDispatch } from "react-redux";
+import DeleteUser from "../DeleteUser/DeleteUser";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const App = () => {
       <PrivateRoute exact path="/Home" component={Home} />
       <PrivateRoute path="/Settings" component={Settings} />
       <PrivateRoute path="/Profile" component={Profile} />
+      <PrivateRoute path="/DeleteUser" component={DeleteUser} />
     </Router>
   );
 };

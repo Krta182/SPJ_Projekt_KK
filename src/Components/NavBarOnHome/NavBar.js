@@ -26,6 +26,9 @@ const NavBar = () => {
           <PrivateNavLink to="/Settings" className={styles.Settings}>
             Settings
           </PrivateNavLink>
+          <PrivateNavLink to="/DeleteUser" className={styles.Settings}>
+            Delete
+          </PrivateNavLink>
           <PrivateNavLink
             to="/"
             className={styles.Logout}

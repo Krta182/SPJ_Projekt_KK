@@ -1,36 +1,18 @@
 import React, { useState } from "react";
 import styles from "./PasswordChanger.module.css";
-import { useDispatch } from "react-redux";
-import { editUserPassword } from "../../redux/actions";
 import { useSelector } from "react-redux";
-import { updateUser, deleteUser, postUser } from "../../services";
+import { updateUser } from "../../services";
 
 const PasswordChanger = () => {
   const [oldPassword, setOldPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const { currentUser } = useSelector((state) => state.users);
 
-  /*
-const handlePost=async()=>{
-
-  try {
-    await postUser(currentUser);
-  } catch (error) {
-    console.log(error);
-  }
-
-}
-  
-  const handleDelete = async () => {
-    await deleteUser(currentUser.id);
-    
-  };
-*/
 
   const fetchData = async () => {
     if (currentUser) {
-      const json = await updateUser(currentUser);
-      console.log(json);
+      const json = await updateUser(currentUser,currentUser.id);
+      console.log(json)
     } else {
       alert("Password change has been incorrect");
     }

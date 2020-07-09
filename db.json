@@ -19,15 +19,6 @@
       "id": 3
     },
     {
-      "name": "Ivan",
-      "surname": "Roso",
-      "email": "ivanRoso@gmal.com",
-      "password": "ivanr",
-      "birthday": "2020-06-01",
-      "gender": "Male",
-      "id": 4
-    },
-    {
       "name": "Robert",
       "surname": "Krtalic",
       "email": "robi.krtalic@gmail.com",
@@ -37,13 +28,41 @@
       "id": 5
     },
     {
+      "isAuth": true,
       "name": "Kristijan",
       "surname": "Krtalic",
       "email": "kk@gmail.com",
-      "password": "3",
-      "birthday": "2020-06-01",
+      "password": "1",
+      "birthday": "1998-01-01",
       "gender": "Male",
       "id": 1
+    },
+    {
+      "name": "Ivanic",
+      "surname": "Bosic",
+      "email": "ivanicbosic@gmail.com",
+      "password": "ivanicbosic",
+      "birthday": "1999-08-07",
+      "gender": "Male",
+      "id": 6
+    },
+    {
+      "name": "Mirko",
+      "surname": "Rakušić",
+      "email": "mr@gmail.com",
+      "password": "mirkor",
+      "birthday": "2000-02-04",
+      "gender": "Male",
+      "id": 7
+    },
+    {
+      "name": "Krta",
+      "surname": "Krtalic",
+      "email": "krta@gmail.com",
+      "password": "6",
+      "birthday": "2016-06-15",
+      "gender": "Male",
+      "id": 8
     }
   ]
 }

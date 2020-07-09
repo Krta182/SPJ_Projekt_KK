@@ -1,0 +1,27 @@
+.DeleteBtn {
+    margin-top: 120px;
+    background-color: rgb(76, 172, 76);
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 30px;
+    width: auto;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 650px;
+  }
+  
+  .DeleteBtn:hover {
+    background-color: rgb(72, 138, 72);
+    border-collapse: 0.5px;
+    border-color: rgb(13, 161, 13);
+    font-size: 30px;
+    width: auto;
+    color: white;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    margin-left: 650px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  

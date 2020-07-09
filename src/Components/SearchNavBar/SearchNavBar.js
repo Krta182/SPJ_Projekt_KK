@@ -1,27 +1,20 @@
 import React, { useState } from "react";
-import{filterUsers} from '../../redux/actions';
+import { filterUsers } from "../../redux/actions";
 import styles from "./SearchNavBar.module.css";
 import { useDispatch } from "react-redux";
-import { useSelector } from 'react-redux';
-
-
+import { useSelector } from "react-redux";
 
 const SearchNavBar = () => {
   const [findUser, setToFindUser] = useState("");
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
-  const { currentUser } = useSelector(state => state.users);
 
+  const { currentUser } = useSelector((state) => state.users);
 
   const handleChangeSearch = async (event) => {
     setToFindUser(event.target.value);
-    console.log(findUser);
-
-    
     
   };
-
-
 
   return (
     <div>
@@ -32,13 +25,7 @@ const SearchNavBar = () => {
           size="75"
           onChange={handleChangeSearch}
           value={findUser}
-        
         />
-        
-       
-        <button className={styles.SearchButton}>
-          Search
-        </button>
       </form>
     </div>
   );

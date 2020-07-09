@@ -8,10 +8,9 @@ import PrivateNavLink from "../Router/PrivateNavLink";
 const HomePage = () => {
   const { currentUser } = useSelector((state) => state.users);
   const { users }=useSelector((state)=>state.users);
-  const dispatch=useDispatch();
   
-  console.log(users.surname);
-  console.log(users.name);
+  console.log(users);
+ // console.log(users.name);
 
   return (
     <div>
