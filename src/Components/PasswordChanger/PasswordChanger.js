@@ -8,11 +8,10 @@ const PasswordChanger = () => {
   const [newPassword, setNewPassword] = useState("");
   const { currentUser } = useSelector((state) => state.users);
 
-
   const fetchData = async () => {
     if (currentUser) {
-      const json = await updateUser(currentUser,currentUser.id);
-      console.log(json)
+      const json = await updateUser(currentUser, currentUser.id);
+      console.log(json);
     } else {
       alert("Password change has been incorrect");
     }
@@ -40,11 +39,9 @@ const PasswordChanger = () => {
     if (currentUser.password !== userPassword.oldPassword) {
       alert("Wrong password input! Please repeat your correct password!");
     } else {
-      // handleDelete();
-
       currentUser.password = userPassword.newPassword;
       fetchData();
-      //handlePost();
+
       alert("You succesfully changed your password!");
     }
 

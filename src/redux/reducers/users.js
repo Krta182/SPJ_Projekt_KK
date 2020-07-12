@@ -35,23 +35,11 @@ function filterUsers(state, action) {
   return Object.assign({}, state, {
     filteredUsers: state.users.filter(
       (user) =>
-        user.name.toLowerCase().search(action.payload.toLowerCase()) !== -1
+        user.name.toLowerCase().search + user.name.toLowerCase().search(action.payload.toLowerCase()) !== -1
     ),
   });
 }
-/*
-function editUserPassword(state,action){
-  const index = state.users.findIndex(c => c.id === action.payload.id);
-  return {
-    ...state,
-    users: [
-      ...state.users.slice(0,index),
-      action.payload,
-      ...state.users.slice(index + 1)
-    ],
-  }
-}
-*/
+
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_USER:
