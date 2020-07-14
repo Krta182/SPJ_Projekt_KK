@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 import SearchNavBar from "../SearchNavBar/SearchNavBar";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../redux/actions";
 import PrivateNavLink from "../Router/PrivateNavLink";
 
-
 const NavBar = () => {
   const dispatch = useDispatch();
+  const { currentUser } = useSelector((state) => state.users);
 
   const handleLogout = () => {
     dispatch(setUser({ email: "", password: "" }));
@@ -20,7 +20,10 @@ const NavBar = () => {
           <PrivateNavLink to="/Home" className={styles.Home}>
             Home
           </PrivateNavLink>
-          <PrivateNavLink to="/Profile" className={styles.Profile}>
+          <PrivateNavLink
+            to={`/Profile/${currentUser.id}`}
+            className={styles.Profile}
+          >
             Profile
           </PrivateNavLink>
           <PrivateNavLink to="/Settings" className={styles.Settings}>

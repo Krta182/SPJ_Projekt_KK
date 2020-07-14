@@ -5,7 +5,8 @@ import { useHistory } from "react-router-dom";
 const HeaderOnProfile = () => {
   const history = useHistory();
 
-  const homeButtonChange = () => {
+  const homeButtonChange = (event) => {
+    event.preventDefault()
     history.push("/Home");
   };
 

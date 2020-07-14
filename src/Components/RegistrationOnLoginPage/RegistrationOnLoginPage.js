@@ -31,7 +31,9 @@ const RegistrationOnLoginPage = () => {
       console.log(error);
     }
 
-    alert("Registration is successful! Now share your experience with friends");
+    alert(
+      "Registration is successful! Please refresh your page and now share your experience with friends"
+    );
 
     dispatch(setUser(user));
     setEmail("");

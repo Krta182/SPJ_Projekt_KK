@@ -3,19 +3,15 @@ import { filterUsers } from "../../redux/actions";
 import styles from "./SearchNavBar.module.css";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { getUsers } from "../../services";
 
 const SearchNavBar = () => {
-  const [findUser, setToFindUser] = useState(filterUsers);
   const dispatch = useDispatch();
 
-
-  const { currentUser } = useSelector((state) => state.users);
-  const { users } = useSelector((state) => state.users);
-
-  const handleChangeSearch = (event) => {
-    setToFindUser(event.target.value);
-    console.log(findUser);
-
+  const handleChangeSearch = async () => {
+    const json = await getUsers();
+    dispatch(filterUsers(json))
+    console.log(json);
   };
 
   return (
@@ -26,7 +22,9 @@ const SearchNavBar = () => {
           placeholder="Search......."
           size="75"
           onChange={handleChangeSearch}
-          onKeyPress={(event) => { event.key === 'Enter' && event.preventDefault(); }}
+          onKeyPress={(event) => {
+            event.key === "Enter" && event.preventDefault();
+          }}
         />
       </form>
     </div>

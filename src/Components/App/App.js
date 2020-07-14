@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import Home from "../Home/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -28,7 +28,7 @@ const App = () => {
 
       <PrivateRoute exact path="/Home" component={Home} />
       <PrivateRoute path="/Settings" component={Settings} />
-      <PrivateRoute path="/Profile" component={Profile} />
+      <PrivateRoute path="/Profile/:id" component={Profile} />
       <PrivateRoute path="/DeleteUser" component={DeleteUser} />
     </Router>
   );

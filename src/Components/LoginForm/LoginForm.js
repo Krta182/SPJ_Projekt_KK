@@ -18,30 +18,29 @@ const LoginForm = () => {
   };
   const handleValidation = () => {
     if (
-      currentUser.email !== user.email &&
-      currentUser.password !== user.password
+      user.email === currentUser.email &&
+      user.password === currentUser.password
     ) {
       history.push("/Home");
     } else {
       alert("Wrong email or password!");
     }
   };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    dispatch(setUser(user));
-   // handleValidation();
-    setEmail("");
-    setPassword("");
-    history.push("/Home");
-  };
-
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
   };
 
   const handleChangePassword = (event) => {
     setPassword(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    //handleValidation();
+    dispatch(setUser(user));
+    setEmail("");
+    setPassword("");
+    history.push("/Home");
   };
 
   return (

@@ -8,3 +8,29 @@
   .Review{
     color: rgb(36, 92, 148);
   }
+
+  .FollowBtn{
+    display: flex;
+    background-color: rgb(36, 92, 148);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(17, 79, 141);
+  }
+
+  .FollowBtn:hover{
+    background-color: rgb(33, 78, 122);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(14, 61, 107);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .FollowBtn:disabled{
+    display: flex;
+    background-color: rgb(36, 92, 148);
+    color: white;
+    border-collapse: 0.5px;
+    border-color: rgb(17, 79, 141);
+  }
+  

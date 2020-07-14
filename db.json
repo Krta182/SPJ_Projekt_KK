@@ -1,68 +1,41 @@
 {
   "users": [
     {
-      "name": "Luka",
-      "surname": "Muse",
-      "email": "lukaMuse@gmail.com",
-      "password": "lucasm",
-      "birthday": "2020-06-01",
-      "gender": "Male",
-      "id": 2
-    },
-    {
-      "name": "ivan",
-      "surname": "kraljevic",
-      "email": "ivankraljevic@gmail.com",
-      "password": "ivank",
-      "birthday": "1998-01-01",
-      "gender": "Male",
-      "id": 3
-    },
-    {
-      "name": "Robert",
-      "surname": "Krtalic",
-      "email": "robi.krtalic@gmail.com",
-      "password": "robik",
-      "birthday": "2020-06-01",
-      "gender": "Male",
-      "id": 5
-    },
-    {
       "isAuth": true,
       "name": "Kristijan",
       "surname": "Krtalic",
       "email": "kk@gmail.com",
-      "password": "1",
-      "birthday": "1998-01-01",
+      "password": "2",
+      "birthday": "2000-02-18",
       "gender": "Male",
       "id": 1
     },
     {
-      "name": "Ivanic",
-      "surname": "Bosic",
-      "email": "ivanicbosic@gmail.com",
-      "password": "ivanicbosic",
-      "birthday": "1999-08-07",
+      "name": "Ivan",
+      "surname": "Kraljevic",
+      "email": "ivankraljevic@gmail.com",
+      "password": "ivank",
+      "birthday": "1998-06-13",
       "gender": "Male",
-      "id": 6
+      "id": 2
     },
     {
-      "name": "Mirko",
-      "surname": "Rakušić",
-      "email": "mr@gmail.com",
-      "password": "mirkor",
-      "birthday": "2000-02-04",
+      "name": "Luka",
+      "surname": "Muse",
+      "email": "lukaMuse@gmail.com",
+      "password": "lm",
+      "birthday": "2020-07-02",
       "gender": "Male",
-      "id": 7
+      "id": 3
     },
     {
-      "name": "Krta",
-      "surname": "Krtalic",
-      "email": "krta@gmail.com",
-      "password": "6",
-      "birthday": "2016-06-15",
+      "name": "test",
+      "surname": "test",
+      "email": "test@gmail.com",
+      "password": "4",
+      "birthday": "2020-07-03",
       "gender": "Male",
-      "id": 8
+      "id": 4
     }
   ]
 }

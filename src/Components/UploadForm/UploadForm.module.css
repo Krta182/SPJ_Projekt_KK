@@ -1,5 +1,5 @@
 .DisplayForm {
-  margin-top: 40px;
+  margin-top:-20px;
   display: flex;
   justify-content:center;
 }
@@ -54,4 +54,8 @@
   cursor: pointer;
   display: none;
   
+}
+
+.UploadImage2{
+  display: none;
 }

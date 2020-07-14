@@ -5,11 +5,11 @@ const initialState = {
     NumberofComments:[],
     userPosts: [],
     PostValue:[],
-    UserImages:[]
+   users:[],
   };
 
 function addPosts(state,action){
-
+  
 }  
 
 function setPosts(state,action){

@@ -5,19 +5,24 @@ import { useDispatch } from "react-redux";
 
 const UploadForm = () => {
   const [post, setPost] = useState("");
+  const [file, setFile] = useState("");
+
 
   const mySubmitHandler = (event) => {
     event.preventDefault();
     setPost("");
   };
 
+  const fileHandler=(event)=>{
+    setFile(event.target.value);
+  }
+
   const fileUploadButton = (event) => {
     document.getElementById("fileButton").click();
-    document.getElementById("fileButton").onchange = () => {
-      this.setState({
+    document.getElementById("fileButton").onChange = () => {
+      setFile({
         fileUploadState: document.getElementById("fileButton").value,
       });
-      event.preventDefault();
     };
   };
 
@@ -27,7 +32,7 @@ const UploadForm = () => {
   };
   return (
     <div className={styles.DisplayForm}>
-      <form onClick={mySubmitHandler}>
+      <form onSubmit={mySubmitHandler}>
         <input
           type="text"
           placeholder="What's on your mind..?"
@@ -39,9 +44,12 @@ const UploadForm = () => {
         <button className={styles.UploadFormBtn} >Upload</button>
         <input id="fileButton" type="file" hidden />
         <button
+            id="fileButton"
           className={styles.UploadImage}
           onClick={fileUploadButton}
           style={{ fontSize: 1 }}
+          onChange={fileHandler}
+          value={file}
         >
           <AddAPhotoIcon />
         </button>
