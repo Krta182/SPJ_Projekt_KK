@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import styles from "./UploadForm.module.css";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
-import { useDispatch } from "react-redux";
+import UploadedPost from "../UploadedPost/UploadedPost";
+import {setPosts} from "../../redux/actions";
+import { useSelector } from "react-redux";
 
 const UploadForm = () => {
-  const [post, setPost] = useState("");
+  const [post, setPostState] = useState("");
   const [file, setFile] = useState("");
+  const { PostValue } = useSelector((state) => state.users);
 
 
   const mySubmitHandler = (event) => {
     event.preventDefault();
-    setPost("");
+      setPosts(post);
+      console.log(PostValue)
+      setPostState("");
   };
 
-  const fileHandler=(event)=>{
+  const fileHandler = (event) => {
     setFile(event.target.value);
-  }
+  };
 
   const fileUploadButton = (event) => {
     document.getElementById("fileButton").click();
@@ -27,33 +32,39 @@ const UploadForm = () => {
   };
 
   const handleChangeForm = (event) => {
-    setPost(event.target.value);
+    setPostState(event.target.value);
+    
     console.log(post);
   };
   return (
-    <div className={styles.DisplayForm}>
-      <form onSubmit={mySubmitHandler}>
-        <input
-          type="text"
-          placeholder="What's on your mind..?"
-          className={styles.uploadForm}
-          onChange={handleChangeForm}
-          value={post}
-        />
+    <div>
+      <div className={styles.DisplayForm}>
+        <form onSubmit={mySubmitHandler}>
+          <input
+            type="text"
+            placeholder="What's on your mind..?"
+            className={styles.uploadForm}
+            onChange={handleChangeForm}
+            value={post}
+          />
 
-        <button className={styles.UploadFormBtn} >Upload</button>
-        <input id="fileButton" type="file" hidden />
-        <button
+          <button className={styles.UploadFormBtn}>Upload</button>
+          <input id="fileButton" type="file" hidden />
+          <button
             id="fileButton"
-          className={styles.UploadImage}
-          onClick={fileUploadButton}
-          style={{ fontSize: 1 }}
-          onChange={fileHandler}
-          value={file}
-        >
-          <AddAPhotoIcon />
-        </button>
-      </form>
+            className={styles.UploadImage}
+            onClick={fileUploadButton}
+            style={{ fontSize: 1 }}
+            onChange={fileHandler}
+            value={file}
+          >
+            <AddAPhotoIcon />
+          </button>
+        </form>
+      </div>
+      <div>
+        <UploadedPost></UploadedPost>
+      </div>
     </div>
   );
 };

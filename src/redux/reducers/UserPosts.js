@@ -4,16 +4,23 @@ const initialState = {
     NumberofLikes:[],
     NumberofComments:[],
     userPosts: [],
-    PostValue:[],
+    Posts:[],
    users:[],
   };
 
 function addPosts(state,action){
-  
+  return {
+    ...state,
+    Posts: [...state.PostValue, ...action.payload],
+    users: [...state.users, ...action.payload],
+  };
 }  
 
 function setPosts(state,action){
-
+  return {
+    ...state,
+    Posts: [...state.PostValue, ...action.payload],
+  };
 }  
 
 

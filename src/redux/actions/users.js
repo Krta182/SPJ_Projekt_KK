@@ -11,6 +11,3 @@ export const filterUsers = createAction(FILTER_USERS);
 
 export const FOLLOW_USER = "FOLLOW_USER";
 export const followUser = createAction(FOLLOW_USER);
-
-export const REMOVE_FOLLOWED_USER = "REMOVE_FOLLOWED_USER";
-export const removeFollowedUser = createAction(REMOVE_FOLLOWED_USER);

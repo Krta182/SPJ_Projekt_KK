@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import styles from "./UploadedPost.module.css";
 import CommentIcon from "@material-ui/icons/Comment";
 import LikeIcon from "@material-ui/icons/ThumbUpAlt";
+import { useSelector } from "react-redux";
 
-const UploadedPost = () => {
+const UploadedPost = (props) => {
+  const { currentUser } = useSelector((state) => state.users);
   const [like, setToLiked] = useState("Like");
   const [Commented, setToCommented] = useState("");
   const [numberOfLikes, setNumberOfLikes] = useState(0);

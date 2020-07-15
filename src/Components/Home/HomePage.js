@@ -5,7 +5,6 @@ import UploadForm from "../UploadForm/UploadForm";
 import { useSelector, useDispatch } from "react-redux";
 import PrivateNavLink from "../Router/PrivateNavLink";
 import { filterUsers } from "../../redux/actions";
-import UploadedPost from "../UploadedPost/UploadedPost";
 import UsersList from "../UsersList/UsersList";
 
 const HomePage = () => {
@@ -33,7 +32,6 @@ const HomePage = () => {
         ) : null}
       </div>
       <UploadForm></UploadForm>
-      <UploadedPost></UploadedPost>
     </div>
   );
 };
