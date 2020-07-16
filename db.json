@@ -37,5 +37,17 @@
       "gender": "Male",
       "id": 4
     }
+  ],
+  "posts": [
+    {
+      "value": "Hi It is Kristijan ",
+      "idUser": 1,
+      "id": 1
+    },
+    {
+      "value": "Test ",
+      "idUser": 1,
+      "id": 2
+    }
   ]
 }

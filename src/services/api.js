@@ -8,3 +8,5 @@ export const updateUser = (body,id) => callApi(`/users/${id}`, {method: "PUT" ,b
 export const deleteUser = id => callApi(`/users/${id}`, { method: "DELETE" });
 
 export const getPosts = () => callApi(`/posts`, { method: "GET" });
+export const postPost = body => callApi("/posts" , { method: "POST" , body});
+

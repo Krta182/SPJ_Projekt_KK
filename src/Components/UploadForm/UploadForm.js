@@ -2,20 +2,33 @@ import React, { useState } from "react";
 import styles from "./UploadForm.module.css";
 import AddAPhotoIcon from "@material-ui/icons/AddAPhoto";
 import UploadedPost from "../UploadedPost/UploadedPost";
-import {setPosts} from "../../redux/actions";
-import { useSelector } from "react-redux";
+import { setPosts } from "../../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
+import { postPost } from "../../services";
 
 const UploadForm = () => {
-  const [post, setPostState] = useState("");
+  const [value, setPostValue] = useState("");
+  const { currentUser } = useSelector((state) => state.users);
   const [file, setFile] = useState("");
-  const { PostValue } = useSelector((state) => state.users);
+  const { posts } = useSelector((state) => state.UserPosts);
+  const dispatch = useDispatch();
+  const idUser = currentUser.id;
 
+  const post = {
+    value,
+    idUser,
+  };
 
-  const mySubmitHandler = (event) => {
+  const mySubmitHandler = async (event) => {
     event.preventDefault();
-      setPosts(post);
-      console.log(PostValue)
-      setPostState("");
+    try {
+      await postPost(post);
+    } catch (error) {
+      console.log(error);
+    }
+    dispatch(setPosts(post));
+    console.log(posts);
+    setPostValue("");
   };
 
   const fileHandler = (event) => {
@@ -32,8 +45,7 @@ const UploadForm = () => {
   };
 
   const handleChangeForm = (event) => {
-    setPostState(event.target.value);
-    
+    setPostValue(event.target.value);
     console.log(post);
   };
   return (
@@ -45,7 +57,8 @@ const UploadForm = () => {
             placeholder="What's on your mind..?"
             className={styles.uploadForm}
             onChange={handleChangeForm}
-            value={post}
+            value={value}
+            required
           />
 
           <button className={styles.UploadFormBtn}>Upload</button>
@@ -64,6 +77,7 @@ const UploadForm = () => {
       </div>
       <div>
         <UploadedPost></UploadedPost>
+        <t className={styles.DisplayValue}>{value}</t>
       </div>
     </div>
   );

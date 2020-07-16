@@ -1,25 +1,24 @@
 import { ADD_POSTS, SET_POSTS } from "../actions";
 
 const initialState = {
-    NumberofLikes:[],
-    NumberofComments:[],
+    numberOfLikes:[],
+    numberOfComments:[],
     userPosts: [],
-    Posts:[],
+    posts:[],
    users:[],
   };
 
 function addPosts(state,action){
   return {
     ...state,
-    Posts: [...state.PostValue, ...action.payload],
-    users: [...state.users, ...action.payload],
+    posts: [...state.posts, ...action.payload],
   };
 }  
 
 function setPosts(state,action){
   return {
     ...state,
-    Posts: [...state.PostValue, ...action.payload],
+    posts: [...state.posts, action.payload],
   };
 }  
 
