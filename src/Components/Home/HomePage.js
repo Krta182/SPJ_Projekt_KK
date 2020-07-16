@@ -3,7 +3,6 @@ import styles from "./HomePage.module.css";
 import NavBarOnHome from "../NavBarOnHome/NavBar";
 import UploadForm from "../UploadForm/UploadForm";
 import { useSelector, useDispatch } from "react-redux";
-import PrivateNavLink from "../Router/PrivateNavLink";
 import { filterUsers } from "../../redux/actions";
 import UsersList from "../UsersList/UsersList";
 

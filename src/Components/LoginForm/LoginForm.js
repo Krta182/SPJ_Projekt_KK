@@ -16,6 +16,7 @@ const LoginForm = () => {
     email,
     password,
   };
+  /*
   const handleValidation = () => {
     if (
       user.email === currentUser.email &&
@@ -26,6 +27,7 @@ const LoginForm = () => {
       alert("Wrong email or password!");
     }
   };
+  */
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
   };

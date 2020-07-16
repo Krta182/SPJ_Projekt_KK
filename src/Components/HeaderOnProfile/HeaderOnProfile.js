@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "../HeaderOnProfile/HeaderOnProfile.module.css";
 import { useHistory } from "react-router-dom";
-import PrivateNavLink from "../Router/PrivateNavLink";
-
 
 const HeaderOnProfile = () => {
   const history = useHistory();

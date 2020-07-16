@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Settings.module.css";
-import NavBar from "../NavBarOnHome/NavBar";
 import PasswordChanger from "../PasswordChanger/PasswordChanger";
 import HeaderOnSettings from "../HeaderOnSettings/HeaderOnSettings";
 

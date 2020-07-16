@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./UsersList.module.css";
 import PrivateNavLink from "../Router/PrivateNavLink";
 import { useSelector } from "react-redux";
